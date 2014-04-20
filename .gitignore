@@ -12,6 +12,7 @@
 *.sln.docstates
 CardGen1/bin/*
 CardGen1/obj/*
+test*
 
 # Build results
 [Dd]ebug/

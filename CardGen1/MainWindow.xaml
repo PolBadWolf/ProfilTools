@@ -6,7 +6,7 @@
     Title="TestCardGen" Height="600" Width="1000" WindowStyle="ThreeDBorderWindow" SnapsToDevicePixels="True" >
     <Grid Name="MyGrid1" Margin="0,0,0,0" SnapsToDevicePixels="False">
         <Grid.RowDefinitions>
-        <RowDefinition Height="80"></RowDefinition>
+        <RowDefinition Height="90"></RowDefinition>
         <RowDefinition Height="*"></RowDefinition>
     </Grid.RowDefinitions>
         <Grid Grid.Row="0" Margin="0,0,0,0" SnapsToDevicePixels="False" Background="YellowGreen">
@@ -37,7 +37,14 @@
             <GroupBox Header="WHITE" Grid.Column="5" Margin="15,10,15,10" Background="White" Foreground="Black">
                 <TextBox x:Name="E_White" Margin="10,10,10,10" TextWrapping="Wrap" Text="7" PreviewKeyDown="E_Key_PreviewKeyDown"/>
             </GroupBox>
-            <Button Grid.Column="6" Margin="25,25,25,15" Content="Пуск" Click="Button_Click"></Button>
+            <Grid Grid.Column="6">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Button Grid.Row="0" Margin="25,5,25,5" Content="Пуск" Click="Button_Click"></Button>
+                <Button Grid.Row="1" Margin="25,5,25,5" Content="Save" IsEnabled="False" Name="bt_save" Click="bt_save_Click"/>
+            </Grid>
         </Grid>
         <Grid Grid.Row="1" Background="#333377" Margin="0,0,0,0">
             <ListBox Name="ThisMemo1" Margin="0,0,0,0" ScrollViewer.VerticalScrollBarVisibility="Auto">
